@@ -1,0 +1,131 @@
+.right__wrapper {
+  &__education {
+    display: flex;
+    flex-direction: column;
+    font-family: $Gotham;
+    background-color: $background-color;
+    // max-height: 900px;
+
+    border-radius: $mainBorderRadius;
+    color: $default-colorBlue;
+    @include ChargeColor;
+    margin: 0px 20px 0 0;
+    text-align: center;
+    padding: 10px;
+  }
+
+  &__title {
+    text-align: left;
+    font-family: $Gotham-Ultra;
+    font-size: 30px;
+    line-height: 1.63;
+    color: $default-white;
+  }
+
+  &__mytitle {
+    padding: 40px 0 0;
+    margin: 0 0 0 40px;
+  }
+
+  &__icon {
+    margin: 20px 0 20px 0;
+    font-size: 60px;
+  }
+
+  &__year {
+    font-size: 34px;
+    font-weight: $mainFontWeight;
+    line-height: 1.52;
+    color: $default-white;
+    margin: 0 0 30px 0;
+  }
+
+  &__school {
+    font-size: 28px;
+    font-weight: $mainFontWeight;
+    color: #0178d6;
+    margin: 0 0 10px;
+    @include ChargeColor;
+    margin: 0 0 30px 0;
+  }
+
+  &__what {
+    color: $default-white;
+    font-weight: 300;
+    opacity: 0.7;
+    font-size: 24px;
+    padding: 0 0 30px;
+  }
+
+  &__link {
+    display: block;
+    color: $default-colorBlue;
+    @include ChargeColor;
+    transition: 1s;
+    margin: 40px 20px 20px 20px;
+    // border: 2px solid;
+    // border-radius: 40px;
+    padding: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+
+    &:hover {
+      border-radius: 40px;
+      background-color: rgba(8, 147, 228, 0.1);
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+.list-education__info {
+  height: 100%;
+}
+
+@media (max-width: 1330px) {
+  .right__wrapper {
+    &__year {
+      font-size: 30px;
+    }
+  }
+}
+@media (max-width: $desktopWidth) {
+  .right__wrapper {
+    &__education {
+      margin: 0 0 20px;
+      width: 100%;
+    }
+
+    &__link {
+      &:not(:last-child) {
+        margin-bottom: 0px;
+      }
+    }
+
+    &__icon {
+      margin: 5px 0;
+    }
+
+    &__year {
+      font-size: 34px;
+      margin: 0 0 5px 0;
+    }
+
+    &__school {
+      margin: 0 0 5px 0;
+    }
+
+    &__what {
+      padding: 0 0 5px;
+    }
+  }
+}
+
+@media (max-width: $phoneWidth) {
+  .right__wrapper {
+    &__what {
+      font-size: 15px;
+    }
+  }
+}
